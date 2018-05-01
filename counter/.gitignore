@@ -10,7 +10,7 @@
 /build
 
 # person
-/vscode
+.vscode/*
 
 # misc
 .DS_Store
