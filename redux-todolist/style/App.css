@@ -1,0 +1,37 @@
+.container {
+  width: 50%;
+  margin: 200px auto;
+}
+
+.todo-add input {
+  height: 25px;
+}
+
+.todo-add button {
+  height: 30px;
+  font-weight: bold;
+}
+
+.todo-list ul {
+  padding: 0;
+}
+
+.todo-list li {
+  margin-left: 41%;
+  list-style-type: circle;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.filter {
+  font-size: 1.3rem;
+}
+
+.todo-add,
+.filter {
+   text-align: center;
+}
+.filter a {
+   text-decoration: none;
+   color: #2b90d9;
+}
