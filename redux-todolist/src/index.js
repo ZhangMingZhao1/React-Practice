@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '.style/index.css';
-import App from './container/App';
+import './style/index.css';
+import App from './containers/App';
 import {createStore} from 'redux';
 import { Provider } from 'react-redux';
-import todoApp from './reducers';
-import './style/index.css';
+import todoApp from './reducer';
+
 
 //获取store
 let store = createStore(todoApp);

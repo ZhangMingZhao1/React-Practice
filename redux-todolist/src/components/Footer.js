@@ -35,7 +35,7 @@ class Footer extends React.Component {
 
 Footer.propTypes = {
   onFilterChange:PropTypes.func.isRequired,
-  filter: ProTypes.oneOf( [
+  filter: PropTypes.oneOf( [
     'SHOW_ALL',
     'SHOW_COMPLETED',
     'SHOW_ACTIVE'

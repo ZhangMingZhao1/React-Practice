@@ -4,9 +4,9 @@
  * 返回新状态
  */
 
-import {combineReducer} from 'redux';
-import { ADD_TODO,COMPLETE_TODO,SET_VISIBILITY_FILTER,VisbilityFilters } from './actions';
-
+import {combineReducers} from 'redux';
+import { ADD_TODO,COMPLETE_TODO,SET_VISIBILITY_FILTER,VisibilityFilters } from './actions';
+const {SHOW_ALL} = VisibilityFilters;
 //过滤器 响应
 const visibilityFilter = (state = SHOW_ALL, action) => {
   switch (action.type) {
@@ -38,7 +38,7 @@ const todos =  (state = [], action) => {
         Object.assign({}, state[action.index], {
           completed: true
         }),
-        ...state.slice(action, index+1)
+        ...state.slice(action.index+1)
       ];
     default:
       return state;
