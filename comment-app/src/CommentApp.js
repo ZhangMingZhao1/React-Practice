@@ -14,7 +14,7 @@ class CommentApp extends Component {
   render() {
     return (
       <div className="wrapper">
-        <CommentInput onSubmit={this.hangleSubmitComment} />
+        <CommentInput onSubmit={this.handleSubmitComment} />
         <CommentList />
       </div>
     )
