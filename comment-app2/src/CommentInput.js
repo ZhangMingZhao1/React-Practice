@@ -16,7 +16,16 @@ class CommentInput extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleUsernameBlur = this.handleUsernameBlur.bind(this);
   }
-  componentDidMount() {
+  componentWillMount() {
+    this._loadUsername();
+  }
+  _loadUsername() {
+    const username = localStorage.getItem('username');
+    if(username) {
+      this.setState({username});
+    }
+  }
+  componentDidMount () {
     this.textarea.focus();//页面加载完成自动聚焦
   }
   _saveUsername(username) {
@@ -38,7 +47,11 @@ class CommentInput extends Component {
   handleSubmit(e) {
     if(this.props.onSubmit) {
       const {username,content} = this.state;
-      this.props.onSubmit({username,content})
+      this.props.onSubmit({
+        username,
+        content,
+        createdTime: +new Date()//转成字符串
+      })
     }
     this.setState({content:''});
   }
