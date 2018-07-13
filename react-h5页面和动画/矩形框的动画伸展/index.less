@@ -1,0 +1,206 @@
+.app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url('../assets/img/bg.png');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .leftBar {
+      position: absolute;
+      // width: 429px;
+      width: 0px;        
+      height: 120px;
+      left: 273px;
+      top: 135px;
+      img {
+          width: 100%;
+          height: 100%;
+      }
+      span {
+          position: absolute;
+          left: 102px;
+          top: 27px;
+          font-family: PingFangSC-Semibold;
+          font-size: 48px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+      }
+  }
+  .rightBar {
+      position: absolute;
+      // width: 429px;
+      width: 0px;        
+      height: 120px;
+      right: 273px;
+      top: 135px;
+      img {
+          width: 100%;
+          height: 100%;
+      }
+      span {
+          position: absolute;
+          right: 114px;
+          top: 27px;
+          font-family: PingFangSC-Semibold;
+          font-size: 48px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+      }
+  }
+  .middleBar {
+      position: absolute;
+      width: 584px;
+      // width: 0px;
+      height: 100px;
+      left: 668px;
+      top: 156px;
+      text-align: center;
+      opacity: 0;
+      img{
+          width: 100%;
+          height: 100%;
+      }
+      span {
+          opacity: 0;
+          position: absolute;
+          left: 196px;
+          top: 17px;
+          font-family: PingFangSC-Semibold;
+          font-size: 48px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+      }
+  }
+  .CountUp {
+      display: none;
+  }
+  .aAvatar {
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      left: 158px;
+      top: 105px;
+      transition: transform .5s;
+      transform: scale(0);
+      background: #efe37a;
+      border-radius: 50%;
+      border: #efe37a solid 10px;
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      img {
+          width: 100%;
+          // height: 100%;
+      }
+  }
+  .bAvatar {
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      left: 1582px;
+      top: 105px;
+      transition: transform .5s;
+      transform: scale(0);
+      background: #efe37a;
+      border-radius: 50%;
+      border: #efe37a solid 10px;
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      img {
+          width: 100%;
+          // height: 100%;
+      }
+  }
+  .infoCard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 278px;
+      width: 1500px;
+      min-height: 500px;
+      .inner {
+          width: 100%;
+      }
+      .emptyDom {
+          opacity: 0;
+          text-align: center;
+          .empty {
+              width:327px;
+              height: 214px;
+              margin-bottom : 102px; 
+          }
+          .emptyTips {
+              // ont-family: PingFangSC-Semibold;
+              font-size: 42px;
+              color: #FFFFFF;
+              letter-spacing: 0;
+          }
+      } 
+      .games, .row {
+          display: flex;
+          width: 100%;
+          font-family: PingFangSC-Semibold;
+          font-size: 48px;
+          color: #FFFFFF;
+          letter-spacing: -0.6px;
+          height: 48px;
+          line-height: 48px;
+          margin-top: 21px;
+          margin-bottom: 43px;
+          opacity: 1;
+          .bar {
+              position: absolute;
+              width: 200px;
+              // width: 0px;
+              transition: width 0.8s;
+              height: 60px;
+              top: 15px;
+              // background: rgba(216,216,216,0.80);
+              background: #EFE37A;
+              opacity: 0.9;
+          }
+          .left {
+              flex: 2;
+              text-align: right;
+              position: relative;
+              .bar {
+                  right: 128px;
+              }
+          } 
+          .right {
+              flex: 2;
+              text-align: left;
+              position: relative;
+              .bar {
+                  left: 128px;
+              }
+          }
+          .middle {
+              width: 332px;
+              text-align: center;
+              opacity: 0;
+          }
+      }
+      .row {
+          // background: rgba(216, 216, 216, 0.2);
+          height: 90px;
+          line-height: 90px;
+          margin-top: 25px;
+          margin-bottom: 0;
+          position: relative;
+          // left: 2000px;
+      }
+      .row {
+          .left,.right {
+              .bar {
+                  &.init {
+                      width: 0!important;
+                  }
+              }
+          }
+      }
+  }
+}
